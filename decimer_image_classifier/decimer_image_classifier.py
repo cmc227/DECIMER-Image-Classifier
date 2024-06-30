@@ -10,7 +10,6 @@ class DecimerImageClassifier:
 
     def __init__(self):
         # Establish GPU growth, load default GPU
-        os.environ["CUDA_VISIBLE_DEVICES"] = "0"
         gpus = tf.config.experimental.list_physical_devices("GPU")
         for gpu in gpus:
             tf.config.experimental.set_memory_growth(gpu, True)
