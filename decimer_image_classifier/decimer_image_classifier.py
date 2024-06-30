@@ -11,7 +11,6 @@ class DecimerImageClassifier:
     def __init__(self):
         # Establish GPU growth, load default GPU
         gpus = tf.config.experimental.list_physical_devices("GPU")
-        print('from script decimer_image_classifier, the gpus are: {f}')
         for gpu in gpus:
             tf.config.experimental.set_memory_growth(gpu, True)
         # Load model
